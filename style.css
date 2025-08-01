@@ -1,0 +1,162 @@
+body {
+    background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background: #fff;
+    padding: 2.5rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(255, 88, 88, 0.15);
+    min-width: 320px;
+    max-width: 350px;
+    /* Add this line */
+    width: 100%;
+    /* Add this line */
+    box-sizing: border-box;
+    /* Add this line */
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-40px) scale(0.95);
+    animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.login-form {
+    width: 100%;
+    /* Add this line */
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #c0392b;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    width: 100%;
+    /* Remove display: inline; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.input-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.input-group {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 1.2rem 0;
+    padding: 0;
+}
+
+.input-group:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.input-group:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeInGroup {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #b71c1c;
+    font-size: 1rem;
+    transition: color 0.3s;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    /* Match button padding */
+    border: 1px solid #ffb3b3;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    /* Match button font size */
+    transition: border 0.3s, box-shadow 0.3s, background 0.3s;
+    background: #fff5f5;
+}
+
+.input-group input:focus {
+    border: 1.5px solid #ff5858;
+    outline: none;
+    background: #ffeaea;
+    box-shadow: 0 0 8px #ffb3b3;
+}
+
+button[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    /* Match input padding */
+    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+    border: 1px solid #ffb3b3;
+    /* Match input border */
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    /* Match input font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        box-shadow 0.3s,
+        border 0.3s,
+        transform 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.15);
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInButton 0.7s 1.4s forwards;
+}
+
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
+    box-shadow: 0 4px 16px rgba(255, 88, 88, 0.25);
+    border: 1.5px solid #ff5858;
+    /* Match input focus border */
+    transform: translateY(-2px) scale(1.03);
+}
