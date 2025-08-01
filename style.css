@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+    background: linear-gradient(135deg, #111 0%, #00ff88 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -11,17 +11,14 @@ body {
 }
 
 .login-container {
-    background: #fff;
+    background: rgba(20, 20, 20, 0.95);
     padding: 2.5rem 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 8px 32px 0 rgba(255, 88, 88, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 136, 0.15);
     min-width: 320px;
     max-width: 350px;
-    /* Add this line */
     width: 100%;
-    /* Add this line */
     box-sizing: border-box;
-    /* Add this line */
     /* Animation */
     opacity: 0;
     transform: translateY(-40px) scale(0.95);
@@ -43,7 +40,7 @@ body {
 .login-form h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #c0392b;
+    color: #00ff88;
     letter-spacing: 1px;
     opacity: 0;
     animation: fadeIn 1s 0.5s forwards;
@@ -95,7 +92,7 @@ form {
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #b71c1c;
+    color: #00ff88;
     font-size: 1rem;
     transition: color 0.3s;
     width: 100%;
@@ -106,33 +103,31 @@ form {
     box-sizing: border-box;
     padding: 0.8rem;
     /* Match button padding */
-    border: 1px solid #ffb3b3;
+    border: 1px solid #00ff88;
     border-radius: 8px;
     font-size: 1.1rem;
     /* Match button font size */
+    background: #111;
+    color: #fff;
     transition: border 0.3s, box-shadow 0.3s, background 0.3s;
-    background: #fff5f5;
 }
 
 .input-group input:focus {
-    border: 1.5px solid #ff5858;
+    border: 1.5px solid #00ff88;
     outline: none;
-    background: #ffeaea;
-    box-shadow: 0 0 8px #ffb3b3;
+    background: #222;
+    box-shadow: 0 0 8px #00ff88;
 }
 
 button[type="submit"] {
     width: 100%;
     box-sizing: border-box;
     padding: 0.8rem;
-    /* Match input padding */
-    background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
-    border: 1px solid #ffb3b3;
-    /* Match input border */
+    background: linear-gradient(90deg, #111 0%, #00ff88 100%);
+    border: 1px solid #00ff88;
     border-radius: 8px;
     color: #fff;
     font-size: 1.1rem;
-    /* Match input font size */
     font-weight: bold;
     cursor: pointer;
     transition:
@@ -140,7 +135,7 @@ button[type="submit"] {
         box-shadow 0.3s,
         border 0.3s,
         transform 0.2s;
-    box-shadow: 0 2px 8px rgba(255, 88, 88, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 255, 136, 0.15);
     opacity: 0;
     transform: scale(0.95);
     animation: fadeInButton 0.7s 1.4s forwards;
@@ -154,9 +149,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
-    box-shadow: 0 4px 16px rgba(255, 88, 88, 0.25);
-    border: 1.5px solid #ff5858;
-    /* Match input focus border */
+    background: linear-gradient(90deg, #00ff88 0%, #111 100%);
+    box-shadow: 0 4px 16px rgba(0, 255, 136, 0.25);
+    border: 1.5px solid #00ff88;
     transform: translateY(-2px) scale(1.03);
 }
